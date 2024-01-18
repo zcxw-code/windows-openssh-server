@@ -137,7 +137,8 @@ Copy-Item -Path $InstallPath\sshd_config_default -Destination $env:ProgramData\s
 if ($DisablePasswordAuthentication) { Add-Content -Path $env:ProgramData\ssh\sshd_config -Value "PasswordAuthentication no" -ErrorAction Stop }
 Add-Content -Path $env:ProgramData\ssh\sshd_config -Value "PubkeyAuthentication yes" -ErrorAction Stop
 Add-Content -Path $env:ProgramData\ssh\sshd_config -Value "Port $Port" -ErrorAction Stop
-Add-Content -Path $env:ProgramData\ssh\sshd_config -Value "AuthorizedKeysFile $env:USERPROFILE\.ssh\authorized_keys" -ErrorAction Stop
+Add-Content -Path $env:ProgramData\ssh\sshd_config -Value "AuthorizedKeysFile __\ssh\administrators_authorized_keys" -ErrorAction Stop
+Add-Content -Path $env:ProgramData\ssh\administrators_authorized_keys -Value "" -ErrorAction Stop
 
 #Set ssh_config
 Write-Host "Configure client config file" -ForegroundColor Green
