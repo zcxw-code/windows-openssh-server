@@ -141,7 +141,7 @@ Add-Content -Path $env:ProgramData\ssh\sshd_config -Value "AuthorizedKeysFile $e
 
 #Set ssh_config
 Write-Host "Configure client config file" -ForegroundColor Green
-Add-Content -Path ~\.ssh\config -Value "`r`PubkeyAuthentication yes" -ErrorAction Stop
+Add-Content -Path ~\.ssh\config -Value "PubkeyAuthentication yes" -ErrorAction Stop
 Add-Content -Path ~\.ssh\authorized_keys -Value "" -ErrorAction Stop
 
 #Setting autostarts
