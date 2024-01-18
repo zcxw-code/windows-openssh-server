@@ -2,7 +2,7 @@
 
 ### Powershell as admin
 ```
-cd $env:temp; Invoke-WebRequest -Uri https://raw.githubusercontent.com/zcxw-code/windows-openssh-serve/main/install.ps1 -OutFile install-openssh.ps1; .\install-openssh.ps1
+cd $env:temp; Invoke-WebRequest -Uri https://raw.githubusercontent.com/zcxw-code/windows-openssh-server/main/install.ps1 -OutFile install-openssh.ps1; .\install-openssh.ps1
 ```
 
 ### Add pub keys
