@@ -7,10 +7,5 @@ cd $env:temp; Invoke-WebRequest -Uri https://raw.githubusercontent.com/zcxw-code
 
 ### Add pub keys
 ```
-Add-Content -Path ~\.ssh\authorized_keys -Value "PUB" -ErrorAction Stop
-
-OR
-
-
-code ~\.ssh\authorized_keys
+Add-Content -Path $env:ProgramData\ssh\administrators_authorized_keys -Value "" -ErrorAction Stop
 ```
